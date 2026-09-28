@@ -119,7 +119,7 @@ networking:
         - path:
             type: "PathPrefix"
             value: "/"
-    web-server-and-search-route:
+    search-route:
       rules:
       - backendRefs:
         - name: "edge/opensearch-sink"
