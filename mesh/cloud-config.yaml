@@ -6,6 +6,9 @@ global:
         replicas: 2
         stateful: true
 clusters:
+  ca-east-bhs-edge:
+    enabled: true
+    overlay: {}
   eu-west-par-edge:
     enabled: true
     overlay: {}
