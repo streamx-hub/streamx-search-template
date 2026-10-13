@@ -6,6 +6,7 @@ default:
 descriptors:
   indexable-resources-producer:
     type: "processing"
+    serviceUnits: 0.5
     containers:
       processor:
         image: "ghcr.io/streamx-hub/streamx-blueprints/indexable-resources-producer:3.0.27-native"
@@ -18,6 +19,7 @@ descriptors:
 
   opensearch-sink:
     type: edge
+    serviceUnits: 4.0
     volumes:
       opensearch-data:
         size: 20Gi
@@ -128,4 +130,3 @@ networking:
         - path:
             type: "PathPrefix"
             value: "/search"
-
